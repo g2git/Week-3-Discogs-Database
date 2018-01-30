@@ -14,7 +14,7 @@ ini_set("display_errors", 1);
 if (file_exists("")) {
     $xml = simplexml_load_file(" ");
 
-    print_r($xml);
+    file_put_contents('data.txt', print_r($xml, true));
 } else {
     exit('Failed to open test.xml.');
 }
